@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_responsive_panel/drawer/drawer_page.dart';
 import 'package:flutter_responsive_panel/responsive_layout.dart';
 
 class WidgetTree extends StatefulWidget {
@@ -25,6 +26,7 @@ class _WidgetTreeState extends State<WidgetTree> {
         largeTablet: Container(),
         computer: Container(),
       ),
+      drawer: DrawerPage(),
     );
   }
 }

@@ -57,7 +57,8 @@ class BarChartSample2State extends State<BarChartSample2> {
         aspectRatio: 1.0,
         child: Card(
           elevation: 3.0,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
           color: Constants.purpleLight,
           child: Padding(
             padding: const EdgeInsets.all(16),
@@ -74,11 +75,11 @@ class BarChartSample2State extends State<BarChartSample2> {
                     // makeTransactionsIcon(),
                     Text(
                       'Monthly Profits',
-                      style: TextStyle(color: Colors.white, fontSize: 22),
+                      style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
                     Text(
                       r'$345,462',
-                      style: TextStyle(color: Color(0xff77839a), fontSize: 16),
+                      style: TextStyle(color: Color(0xff77839a), fontSize: 18),
                     ),
                   ],
                 ),
@@ -86,14 +87,22 @@ class BarChartSample2State extends State<BarChartSample2> {
                   children: <Widget>[
                     const Text(
                       'Of ',
-                      style: TextStyle(color: Color(0xff77839a), fontSize: 16.0),
+                      style:
+                          TextStyle(color: Color(0xff77839a), fontSize: 16.0),
                     ),
                     Text(
                       'Sales ',
                       style: TextStyle(color: leftBarColor, fontSize: 16.0),
                     ),
-                    const Text('And ', style: TextStyle(color: Color(0xff77839a), fontSize: 16.0),),
-                    Text('Orders', style: TextStyle(color: rightBarColor, fontSize: 16.0),),
+                    const Text(
+                      'And ',
+                      style:
+                          TextStyle(color: Color(0xff77839a), fontSize: 16.0),
+                    ),
+                    Text(
+                      'Orders',
+                      style: TextStyle(color: rightBarColor, fontSize: 16.0),
+                    ),
                   ],
                 ),
                 const SizedBox(
@@ -130,8 +139,8 @@ class BarChartSample2State extends State<BarChartSample2> {
                               if (touchedGroupIndex != -1) {
                                 var sum = 0.0;
                                 for (var rod
-                                in showingBarGroups[touchedGroupIndex]
-                                    .barRods) {
+                                    in showingBarGroups[touchedGroupIndex]
+                                        .barRods) {
                                   sum += rod.toY;
                                 }
                                 final avg = sum /
@@ -140,13 +149,14 @@ class BarChartSample2State extends State<BarChartSample2> {
                                         .length;
 
                                 showingBarGroups[touchedGroupIndex] =
-                                    showingBarGroups[touchedGroupIndex].copyWith(
-                                      barRods: showingBarGroups[touchedGroupIndex]
-                                          .barRods
-                                          .map((rod) {
-                                        return rod.copyWith(toY: avg);
-                                      }).toList(),
-                                    );
+                                    showingBarGroups[touchedGroupIndex]
+                                        .copyWith(
+                                  barRods: showingBarGroups[touchedGroupIndex]
+                                      .barRods
+                                      .map((rod) {
+                                    return rod.copyWith(toY: avg);
+                                  }).toList(),
+                                );
                               }
                             });
                           }),

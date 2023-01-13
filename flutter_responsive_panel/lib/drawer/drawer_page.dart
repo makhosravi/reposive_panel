@@ -94,7 +94,10 @@ class _DrawerPageState extends State<DrawerPage> {
                         ),
                       ),
                     ),
-                    const Divider(color: Colors.white, thickness: 0.1,),
+                    const Divider(
+                      color: Colors.white,
+                      thickness: 0.1,
+                    ),
                   ],
                 ),
               ),

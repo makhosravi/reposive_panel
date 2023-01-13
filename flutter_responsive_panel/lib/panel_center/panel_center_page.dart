@@ -78,17 +78,33 @@ class _PanelCenterPageState extends State<PanelCenterPage> {
               child: Card(
                 elevation: 3.0,
                 color: Constants.purpleLight,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0),),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                ),
                 child: Column(
-                  children: List.generate(_persons.length, (index) => ListTile(
-                    leading: CircleAvatar(
-                      radius: 15.0,
-                      child: Text(_persons[index].name.substring(0, 1), style: const TextStyle(color: Colors.white),),
-                      backgroundColor: _persons[index].color,
-                    ),
-                    title: Text(_persons[index].name, style: const TextStyle(color: Colors.white),),
-                    trailing: IconButton(onPressed: (){}, icon: const Icon(Icons.message, color: Colors.white,),),
-                  )),
+                  children: List.generate(
+                      _persons.length,
+                      (index) => ListTile(
+                            leading: CircleAvatar(
+                              radius: 15.0,
+                              child: Text(
+                                _persons[index].name.substring(0, 1),
+                                style: const TextStyle(color: Colors.white),
+                              ),
+                              backgroundColor: _persons[index].color,
+                            ),
+                            title: Text(
+                              _persons[index].name,
+                              style: const TextStyle(color: Colors.white),
+                            ),
+                            trailing: IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.message,
+                                color: Colors.white,
+                              ),
+                            ),
+                          )),
                 ),
               ),
             ),

@@ -23,7 +23,8 @@ class PieChart2State extends State {
       ),
       child: Card(
         elevation: 3.0,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
         color: Constants.purpleLight,
         child: Row(
           children: <Widget>[

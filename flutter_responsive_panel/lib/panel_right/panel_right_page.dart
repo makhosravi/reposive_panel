@@ -87,9 +87,12 @@ class _PanelRightPageState extends State<PanelRightPage> {
                   children: List.generate(
                     _products.length,
                     (index) => SwitchListTile.adaptive(
-                      title: Text(_products[index].name, style: const TextStyle(color: Colors.white),),
+                      title: Text(
+                        _products[index].name,
+                        style: const TextStyle(color: Colors.white),
+                      ),
                       value: _products[index].enable,
-                      onChanged: (newValue){
+                      onChanged: (newValue) {
                         setState(() {
                           _products[index].enable = newValue;
                         });

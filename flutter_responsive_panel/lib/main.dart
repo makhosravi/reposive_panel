@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Constants.purpleDark,
         canvasColor: Constants.purpleLight,
       ),
+      //a class to handle the changes of the screen sizes
       home: const WidgetTree(),
     );
   }

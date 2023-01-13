@@ -82,7 +82,7 @@ class _WidgetTreeState extends State<WidgetTree> {
                 });
               },
             )
-          : SizedBox(),
+          : const SizedBox(),
     );
   }
 }

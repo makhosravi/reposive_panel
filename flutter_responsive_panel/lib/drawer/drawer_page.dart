@@ -55,7 +55,7 @@ class _DrawerPageState extends State<DrawerPage> {
                         ),
                       ),
               ),
-              // This will create a list od widgets
+              // This will create a list of widgets
               ...List.generate(
                 _buttonNames.length,
                 (index) => Column(

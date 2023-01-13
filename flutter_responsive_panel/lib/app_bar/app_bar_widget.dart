@@ -53,6 +53,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
             width: Constants.kPadding,
           ),
           const Spacer(),
+          //middle menu on computer size or selected menu for smaller ones
           if (ResponsiveLayout.isComputer(context))
             ...List.generate(
               _buttonNames.length,
@@ -151,6 +152,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
               ),
             ],
           ),
+          //profile icon at the right top corner of the computer screen size
           if (!ResponsiveLayout.isPhone(context))
             Container(
               margin: const EdgeInsets.all(Constants.kPadding),
